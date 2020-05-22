@@ -21,9 +21,7 @@ function App() {
       techs: ["React", "Node.js"],
     };
     const { data, status } = await api.post('/repositories', repository);
-    if(status === 201){
-      setRepositories([...repositories, data]);
-    }    
+    setRepositories([...repositories, data]);   
   }
 
   async function handleRemoveRepository(id) {
